@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Casa à Venda - Jardim dos Lagos</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background: url('imagens/fundo.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: brightness(0.6);
+      color: #fff;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #fff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    section {
+      padding: 40px 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 20px auto;
+      max-width: 1000px;
+      border-radius: 12px;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #ffd700;
+      text-align: center;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    /* Carrossel */
+    .carrossel-container {
+      text-align: center;
+    }
+
+    .carrossel {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease;
+      width: 100%;
+    }
+
+    .slides img {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 12px;
+      display: none;
+    }
+
+    .slides img.active {
+      display: block;
+    }
+
+    .anterior, .proximo {
+      background-color: rgba(0,0,0,0.6);
+      color: white;
+      border: none;
+      padding: 1rem;
+      cursor: pointer;
+      font-size: 1.5rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      border-radius: 50%;
+    }
+
+    .anterior { left: 10px; }
+    .proximo { right: 10px; }
+
+    footer {
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #ccc;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>www.casajddoslagos.com.br</h1>
+  </header>
+
+  <nav>
+    <a href="#historia">História</a>
+    <a href="#composicao">Composição</a>
+    <a href="#localizacao">Localização</a>
+    <a href="#documentacao">Valores</a>
+  </nav>
+
+  <section id="historia">
+    <h2>História</h2>
+    <p>Um sonho que virou realidade — e agora pode ser seu!<br><br>
+    Essa casa não foi apenas construída, ela foi idealizada com amor e realizada com dedicação. Inspirado por um projeto encontrado em uma revista de arquitetura, o proprietário se encantou com cada detalhe e decidiu torná-lo realidade, tijolo por tijolo. O lar acolheu momentos inesquecíveis com seus três filhos e foi palco de muitas memórias felizes.<br><br>
+    Hoje, com os filhos seguindo seus caminhos, o casal sente que a casa ficou grande demais para dois. Por isso, com o coração cheio de gratidão, decidiram dar a oportunidade para que uma nova família viva essa experiência única. Você pode ser o próximo capítulo dessa linda história.</p>
+  </section>
+
+  <section id="composicao">
+    <h2>Composição da Casa</h2>
+    <p>Espaço, conforto e elegância em cada ambiente:</p>
+    <ul>
+      <li>4 suítes espaçosas</li>
+      <li>Escritório para home office</li>
+      <li>Sala de jantar e sala de TV</li>
+      <li>2 cozinhas funcionais</li>
+      <li>Lavabo + banheiro da piscina</li>
+      <li>Despensa e quartinho de apoio</li>
+      <li>Garagem coberta para 2 carros, espaço descoberto para mais 2</li>
+      <li>Terreno: [inserir metragem] | Área construída: [inserir metragem]</li>
+    </ul>
+
+    <div class="carrossel-container">
+      <h2>Galeria de Fotos</h2>
+      <div class="carrossel">
+        <button class="anterior" onclick="mudarSlide(-1)">❮</button>
+        <div class="slides">
+          <img src="imagens/foto01.jpeg" alt="Foto 1">
+          <img src="imagens/foto02.jpeg" alt="Foto 2">
+          <img src="imagens/foto03.jpeg" alt="Foto 3">
+          <img src="imagens/foto04.jpeg" alt="Foto 4">
+          <img src="imagens/foto05.jpeg" alt="Foto 5">
+          <img src="imagens/foto06.jpeg" alt="Foto 6">
+          <img src="imagens/foto07.jpeg" alt="Foto 7">
+          <img src="imagens/foto08.jpeg" alt="Foto 8">
+          <img src="imagens/foto09.jpeg" alt="Foto 9">
+          <img src="imagens/foto10.jpeg" alt="Foto 10">
+          <img src="imagens/foto11.jpeg" alt="Foto 11">
+        </div>
+        <button class="proximo" onclick="mudarSlide(1)">❯</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="localizacao">
+    <h2>Localização</h2>
+    <p>Qualidade de vida em um dos melhores endereços de Indaiatuba!<br><br>
+    Situada no Condomínio Jardim dos Lagos, na Rodovia Lix da Cunha, nº 80, esta casa une tranquilidade, segurança e fácil acesso às principais vias da cidade.<br><br>
+    Indaiatuba é reconhecida por sua excelente infraestrutura, qualidade de vida e constante valorização imobiliária — o que torna essa aquisição uma oportunidade rara tanto para morar quanto para investir.</p>
+  </section>
+
+  <section id="documentacao">
+    <h2>Documentação e Valores</h2>
+    <p>Pronta para você entrar e viver!</p>
+    <ul>
+      <li>Documentação totalmente regularizada</li>
+      <li>Valor de venda: <strong>R$ 2.800.000,00</strong></li>
+    </ul>
+    <p>
+      Corretor: Saulo Henrique dos Santos – CRECI 95047 – (19) 99117-7796<br>
+      Proprietário: Emilio Aparecido dos Santos – (19) 97402-4920
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Casa Jardim dos Lagos. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slides img");
+
+    function mostrarSlide(n) {
+      slides.forEach(slide => slide.classList.remove("active"));
+      slideIndex = (n + slides.length) % slides.length;
+      slides[slideIndex].classList.add("active");
+    }
+
+    function mudarSlide(n) {
+      mostrarSlide(slideIndex + n);
+    }
+
+    // Mostrar o primeiro slide
+    mostrarSlide(slideIndex);
+  </script>
+</body>
+</html>
